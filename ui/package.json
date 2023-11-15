@@ -1,0 +1,45 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "Artour AR UI",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "@ar-js-org/ar.js": "3.4.5",
+    "@artcom/react-three-arjs": "0.5.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@react-three/drei": "^9.88.14",
+    "@react-three/fiber": "8.13.4",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "3.31.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "three": "0.154.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/runtime": "7.13.8",
+    "babel-loader": "^9.1.3",
+    "typescript": "4.1.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "watch": "webpack serve --hot --https --mode=development",
+    "start": "react-scripts start",
+    "build": "webpack --mode=production",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
