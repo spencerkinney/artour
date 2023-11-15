@@ -33,6 +33,7 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
+    "heroku-prebuild": "npm install --legacy-peer-deps",
     "watch": "webpack serve --hot --https --mode=development",
     "start": "react-scripts start",
     "build": "webpack --mode=production",
