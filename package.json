@@ -6,6 +6,9 @@
     "react",
     "starter"
   ],
+  "engines": {
+    "node": "20.x"
+  },
   "main": "src/index.js",
   "dependencies": {
     "@ar-js-org/ar.js": "3.4.5",
