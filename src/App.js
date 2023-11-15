@@ -47,19 +47,19 @@ function App() {
         debug={true}
         params={{ smooth: true }}
         type={"pattern"}
-        patternUrl={"data/pattern-exhibit_a.patt"}
+        patternUrl={"/data/pattern-exhibit_a.patt"}
         onMarkerFound={() => console.log("Marker Found basquiat")}
       >
-        <ArtworkBox inputTexture={"data/exhibit1.jpg"}/>
+        <ArtworkBox inputTexture={"/data/exhibit1.jpg"}/>
       </ARMarker>
       <ARMarker
         debug={true}
         params={{ smooth: true }}
         type={"pattern"}
-        patternUrl={"data/pattern-exhibit_b.patt"}
+        patternUrl={"/data/pattern-exhibit_b.patt"}
         onMarkerFound={() => console.log("Marker Found tuan")}
       >
-        <ArtworkBox inputTexture={"data/exhibit2.jpg"}/>
+        <ArtworkBox inputTexture={"/data/exhibit2.jpg"}/>
       </ARMarker>
 
 
