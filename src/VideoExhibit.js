@@ -83,10 +83,13 @@ function VideoExhibit() {
 
     video.play().then(() => {
       const texture = new THREE.VideoTexture(video);
-      texture.minFilter = THREE.LinearFilter;
+      //texture.minFilter = THREE.LinearFilter;
       setVideoTexture(texture);
     });
 
+    return () => {
+      video.load();
+    };
   }, []);
 
   const artPosition = [0, 0, 3]; // Set the art's position
