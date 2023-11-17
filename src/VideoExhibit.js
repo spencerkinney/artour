@@ -27,7 +27,7 @@ function ArtworkBox({ rotationSpeed, position, videoTexture }) {
           {/* Increase the extrude depth to eliminate the gap */}
           <mesh>
             <planeGeometry args={[artworkWidth, artworkHeight, 1, 1]} extrude={[0, 0, frameDepth]} />
-            <meshPhysicalMaterial attach="material" map={videoTexture || artworkTexture} side={THREE.DoubleSide} />
+            <meshPhysicalMaterial attach="material" map={videoTexture} side={THREE.DoubleSide} />
           </mesh>
         </group>
 
@@ -77,7 +77,6 @@ function VideoExhibit() {
     video.src = "/data/Lagoon-Pan.mp4";
     video.loop = true;
     video.muted = true;
-    video.crossOrigin = "anonymous";
 
     video.play().then(() => {
       const texture = new THREE.VideoTexture(video);
@@ -86,8 +85,6 @@ function VideoExhibit() {
     });
 
     return () => {
-      video.pause();
-      video.removeAttribute("src");
       video.load();
     };
   }, []);
