@@ -75,7 +75,7 @@ function VideoExhibit() {
   useEffect(() => {
     const video = document.createElement("video");
     video.src = "/data/Lagoon-Pan.mp4";
-    video.crossOrigin = "anonymous";
+    //video.crossOrigin = "anonymous";
     video.loop = true;
     video.autoplay = "muted";
     video.muted = true;
