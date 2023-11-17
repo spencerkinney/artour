@@ -6,8 +6,7 @@ import * as THREE from "three";
 import Skybox from "./Skybox";
 import "./Exhibit.css";
 
-function ArtworkBox({ inputTexture, rotationSpeed, position, videoTexture }) {
-  const artworkTexture = useTexture(inputTexture);
+function ArtworkBox({ rotationSpeed, position, videoTexture }) {
   const artworkWidth = 3.4;
   const artworkHeight = 2;
   const frameDepth = 0.1; // Depth of the frame
@@ -114,7 +113,7 @@ function VideoExhibit() {
         />
 
         {/* Artwork */}
-        <ArtworkBox inputTexture={`/data/exhibit1.jpg`} rotationSpeed={0} position={artPosition} videoTexture={videoTexture} />
+        <ArtworkBox rotationSpeed={0} position={artPosition} videoTexture={videoTexture} />
 
         {/* Ground plane */}
         <mesh receiveShadow rotation-x={-Math.PI / 2} position={[0, -1.5, 0]}>
