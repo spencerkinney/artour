@@ -76,7 +76,9 @@ function VideoExhibit() {
     const video = document.createElement("video");
     video.src = "/data/Lagoon-Pan.mp4";
     video.loop = true;
+    video.autoplay = "muted";
     video.muted = true;
+    video.playsInline = true;
 
     video.play().then(() => {
       const texture = new THREE.VideoTexture(video);
