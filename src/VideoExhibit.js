@@ -87,9 +87,6 @@ function VideoExhibit() {
       setVideoTexture(texture);
     });
 
-    return () => {
-      video.load();
-    };
   }, []);
 
   const artPosition = [0, 0, 3]; // Set the art's position
