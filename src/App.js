@@ -9,8 +9,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ex1" element={<Exhibit />} />
-        <Route path="/vex" element={<VideoExhibit />} />
+        <Route path="/0" element={<Exhibit />} />
+        <Route path="/2" element={<VideoExhibit />} />
       </Routes>
     </Router>
   );
