@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
-
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
-const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 module.exports = (_, { mode }) => ({
   entry: {
@@ -12,6 +11,7 @@ module.exports = (_, { mode }) => ({
   devServer: {
     host: "0.0.0.0",
     hot: true,
+    historyApiFallback: true, // Add this line to enable client-side routing
   },
   resolve: {
     alias: {
@@ -47,6 +47,11 @@ module.exports = (_, { mode }) => ({
           },
         ],
       },
+      // Add this rule for CSS files
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
-})
+});
