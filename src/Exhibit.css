@@ -1,0 +1,65 @@
+/* Apply styles to the exhibit-container */
+.exhibit-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style the exhibit-content */
+  .exhibit-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif; /* Apple-style font */
+  }
+  
+  /* Style the exhibit-title and exhibit-description */
+  .exhibit-title {
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  .exhibit-description {
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  /* Style the back-button with an Apple-style look */
+  .back-button {
+    background-color: #007AFF; /* Apple's blue color */
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif; /* Apple-style font */
+    font-size: 14px; /* Adjust as needed */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  
+    /* Hover effect */
+    &:hover {
+      background-color: #0054A6; /* Slightly darker blue on hover */
+    }
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust the styles for smaller screens */
+    .exhibit-content {
+      font-size: 14px;
+      padding: 5px;
+      height: 225px;
+    }
+  
+    .exhibit-title {
+      font-size: 20px; /* Adjust title font size for smaller screens */
+    }
+  
+    .exhibit-description {
+      font-size: 14px; /* Adjust description font size for smaller screens */
+    }
+  }
+  
