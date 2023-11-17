@@ -71,29 +71,39 @@ function VideoExhibit() {
   const controlsRef = useRef();
   const [enableRotate, setEnableRotate] = useState(true);
   const [videoTexture, setVideoTexture] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const video = document.createElement("video");
     video.src = "/data/Lagoon-Pan.mp4";
-    //video.crossOrigin = "anonymous";
+    video.crossOrigin = "anonymous";
     video.loop = true;
     video.autoplay = "muted";
     video.muted = true;
     video.playsInline = true;
 
-    video.play().then(() => {
+    video.addEventListener("canplaythrough", () => {
       const texture = new THREE.VideoTexture(video);
-      //texture.minFilter = THREE.LinearFilter;
       setVideoTexture(texture);
     });
 
-    return () => {
-      video.load();
-    };
+    video.addEventListener("error", (event) => {
+      setError("Error loading the video."); // Set error message
+      console.error("Video loading error:", event);
+    });
+
+    video.play().catch((error) => {
+      setError("Error playing the video."); // Set error message
+      console.error("Video playback error:", error);
+    });
   }, []);
 
   const artPosition = [0, 0, 3]; // Set the art's position
 
+  if (videoTexture === null) {
+    return null; // Don't render anything until the video texture is ready
+  }
+  
   return (
     <div className="exhibit-container">
       <Canvas className="canvas-container">
@@ -123,6 +133,7 @@ function VideoExhibit() {
       </Canvas>
       <div className="exhibit-content">
         <p className="exhibit-description">A Lagoon View</p>
+        {error && <p className="error-message">{error}</p>} {/* Display error message */}
         <button className="back-button" onClick={handleBackClick}>
           Back home
         </button>
