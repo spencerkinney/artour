@@ -27,7 +27,7 @@ function ArtworkBox({ rotationSpeed, position, videoTexture }) {
           {/* Increase the extrude depth to eliminate the gap */}
           <mesh>
             <planeGeometry args={[artworkWidth, artworkHeight, 1, 1]} extrude={[0, 0, frameDepth]} />
-            <meshPhysicalMaterial attach="material" map={videoTexture} side={THREE.DoubleSide} />
+            <meshPhysicalMaterial attach="material" map={videoTexture || artworkTexture} side={THREE.DoubleSide} />
           </mesh>
         </group>
 
