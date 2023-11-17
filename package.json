@@ -20,11 +20,15 @@
     "@types/three": "^0.158.2",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "3.31.1",
+    "css-loader": "^6.8.1",
     "meshoptimizer": "^0.18.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router": "^6.19.0",
+    "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "serve": "^14.2.1",
+    "style-loader": "^3.3.3",
     "three": "0.154.0"
   },
   "devDependencies": {
