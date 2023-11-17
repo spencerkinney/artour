@@ -78,20 +78,22 @@ function VideoExhibit() {
     video.loop = true;
     video.muted = true;
     video.crossOrigin = "anonymous";
-
-    video.play().then(() => {
-      const texture = new THREE.VideoTexture(video);
-      texture.minFilter = THREE.LinearFilter;
-      setVideoTexture(texture);
+  
+    video.addEventListener("loadedmetadata", () => {
+      video.play().then(() => {
+        const texture = new THREE.VideoTexture(video);
+        texture.minFilter = THREE.LinearFilter;
+        setVideoTexture(texture);
+      });
     });
-
+  
     return () => {
       video.pause();
       video.removeAttribute("src");
       video.load();
     };
   }, []);
-
+  
   const artPosition = [0, 0, 3]; // Set the art's position
 
   return (
