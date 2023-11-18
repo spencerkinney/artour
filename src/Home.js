@@ -23,10 +23,19 @@ function ArtworkBox({ inputTexture, isVisible }) {
   return (
     <mesh isVisible={isVisible} position={[0, 0, 0]}>
       <group rotation={groupRotation}>
-        <Plane args={[artworkWidth, artworkHeight]} position={[0, 0, frameDepth]}>
+        <Plane
+          args={[artworkWidth, artworkHeight]}
+          position={[0, 0, frameDepth]}
+        >
           <meshStandardMaterial attach="material" map={artworkTexture} />
         </Plane>
-        <Box args={[artworkWidth + frameWidth, artworkHeight + frameWidth, frameDepth]}>
+        <Box
+          args={[
+            artworkWidth + frameWidth,
+            artworkHeight + frameWidth,
+            frameDepth,
+          ]}
+        >
           <meshStandardMaterial attach="material" color={"brown"} />
         </Box>
       </group>
