@@ -5,6 +5,11 @@
 
 Artour is a project developed for the imnotArt hackathon. It's designed to display art in an interactive manner, with the Chicago World's Fair Columbian Exposition serving as an example exhibit.
 
+## Authors
+- Michael Finney
+- Spencer Kinney
+- Melinda McClimans
+
 ## Project Description
 
 The core idea of Artour is to enhance the way art is presented and experienced. Using the Chicago World's Fair Columbian Exposition as an example, the project demonstrates the potential of integrating technology with art exhibitions.
