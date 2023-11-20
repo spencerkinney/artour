@@ -3,11 +3,11 @@
 <img src="https://i.postimg.cc/zf2xtLGQ/Screenshot-2023-11-19-at-3.png" width="500"/>
 
 
-Artour is a project developed for the imNotArt hackathon. It's designed to display art in an interactive manner, with the Chicago World's Fair serving as an example exhibit.
+Artour is a project developed for the imnotArt hackathon. It's designed to display art in an interactive manner, with the Chicago World's Fair Columbian Exposition serving as an example exhibit.
 
 ## Project Description
 
-The core idea of Artour is to enhance the way art is presented and experienced. Using the Chicago World's Fair as an example, the project demonstrates the potential of integrating technology with art exhibitions.
+The core idea of Artour is to enhance the way art is presented and experienced. Using the Chicago World's Fair Columbian Exposition as an example, the project demonstrates the potential of integrating technology with art exhibitions.
 
 ## Technologies
 
